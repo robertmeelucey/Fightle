@@ -1,7 +1,7 @@
-function UFCEvent() {
+function UFCEvent(props) {
     return (
         <div className="event">
-            <h1>UFC 300</h1>
+            <h1>{props.ufcEvent}</h1>
         </div>
     );
 }

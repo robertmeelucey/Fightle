@@ -1,7 +1,7 @@
-function WeightClass(){
+function WeightClass(props){
     return(
         <div className="weight-class">
-            <h1>Light Heavyweight</h1>
+            <h1>{props.weightClass}</h1>
         </div>
     );
 }
