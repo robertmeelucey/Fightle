@@ -1,7 +1,7 @@
 function UFCEvent(props) {
     return (
-        <div className="event">
-            <h1>{props.ufcEvent}</h1>
+        <div className="event" style = {{backgroundColor: props.ufcDebutColor}}>
+            <p className="event-title">{props.ufcEvent}</p>
         </div>
     );
 }

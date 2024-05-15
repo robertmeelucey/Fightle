@@ -1,48 +1,295 @@
 .flag {
-  border: 2px solid rgb(137, 137, 137);
+  /* border: 2px solid rgb(137, 137, 137);
   border-radius: 10%;
   box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
   padding: 20px;
   margin: 10px;
-  display: inline-block;
+  display: inline-block; 
+  border: 2px solid rgb(0, 0, 0); */
+  height: 120px;
+  width: 200px;
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  border: 1px solid #dfe1e5;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow:rgba(32, 33, 36, 0.28) 0px 1px 6px 0px;
+  margin-bottom: 19px;
+}
+
+.flag img {
+  max-width: calc(100% - 20px); /* Set the maximum width of the image to fit within the container with a 10px margin on each side */
+  max-height: calc(100% - 20px);
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove any default inline spacing */
+  margin: auto; /* Center the image horizontally within the container */
 }
 
 .picture {
-  border: 2px solid rgb(137, 137, 137);
+  /* border: 2px solid rgb(137, 137, 137);
   border-radius: 10%;
   box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
   padding: 20px;
   margin: 10px;
-  display: inline-block;
+  display: inline-block; */
+  
+  height: 170px;
+  width: 290px;
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  border: 1px solid #dfe1e5;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow:rgba(32, 33, 36, 0.28) 0px 1px 6px 0px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.picture img {
+  max-width: calc(100% - 20px); /* Set the maximum width of the image to fit within the container with a 10px margin on each side */
+  max-height: calc(100% - 20px);
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove any default inline spacing */
+  margin: auto; /* Center the image horizontally within the container */
 }
 
 .weight-class {
-  border: 2px solid rgb(137, 137, 137);
+  /* border: 2px solid rgb(137, 137, 137);
   border-radius: 10%;
   box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
   padding: 20px;
   margin: 10px;
   display: inline-block;
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif; */
+  
+  height: 50px;
+  width: 200px;
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  border: 1px solid #dfe1e5;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow:rgba(32, 33, 36, 0.28) 0px 1px 6px 0px;
+  color: white;
+  margin-bottom: 19px;
 }
 
 .event {
-  border: 2px solid rgb(137, 137, 137);
+  /* border: 2px solid rgb(137, 137, 137);
   border-radius: 10%;
   box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
   padding: 20px;
   margin: 10px;
   display: inline-block;
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif; */
+  
+  height: 70px;
+  width: 290px;
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  border: 1px solid #dfe1e5;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow:rgba(32, 33, 36, 0.28) 0px 1px 6px 0px;
+  color: white;
 }
 
-.card {
-  border: 2px solid rgb(137, 137, 137);
-  border-radius: 3%;
+.event-title{
+  /* Additional styling for the event title (h1) */
+  width: 290px; /* Ensure text doesn't overflow horizontally */
+    max-height: 100%; /* Ensure text doesn't overflow vertically */
+    font-size: min(3vw, 3vh); 
+  text-align: center;
+  word-wrap: break-word;
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow:hidden; /* Hide overflowing text */
+  font-size: 2; /* Use viewport units to dynamically adjust font size */
+  color: white;
+}
+
+.ufcDebutYear {
+  /* border: 2px solid rgb(137, 137, 137);
+  border-radius: 10%;
   box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
   padding: 20px;
   margin: 10px;
   display: inline-block;
+
+  font-family: Arial, Helvetica, sans-serif; */
+  
+  height: 50px;
+  width: 200px;
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  border: 1px solid #dfe1e5;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow:rgba(32, 33, 36, 0.28) 0px 1px 6px 0px;
+  color: white;
 }
+
+.fighterCard {
+  
+  width: 550px;
+  height: 380px;
+  flex-wrap: wrap;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #dfe1e5;
+  border-radius: 15px;
+  background-color: rgb(130,131,132);
+  box-shadow:rgba(32, 33, 36, 0.28) 0px 1px 6px 0px;
+}
+
+.twoHalves {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 6px;
+}
+
+.half{
+  height: 267px;
+  flex-wrap: wrap;
+  /* gap: 20px; */
+  display: flex;
+  flex-direction: column;
+  margin-right: 6px;
+  margin-left: 12px;
+}
+
+.name{
+  
+  height: 80px;
+  width: 550px;
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  border: 1px solid #dfe1e5;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow:rgba(32, 33, 36, 0.28) 0px 1px 6px 0px;
+  font-family:'Avantgarde', TeX Gyre Adventor, URW Gothic L, sans-serif;
+  color:rgb(255, 255, 255);
+  margin-bottom: -9px;
+}
+
+
+/* .modalBackground {
+width: 100vw;
+height: 100vh;
+background-color:rgba(200, 200, 200);
+position: fixed; 
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.modalContainer {
+z-index: 9999;
+width: 500px;
+height: 500px;
+border-radius: 12px;
+background-color:white;
+box-shadow: ☐ rgba(0, 0, 0, 0.35) 0px 5px 15px;
+border: 2px solid rgb(25, 24, 24);
+display: flex;
+flex-direction: column;
+padding: 25px;
+}
+.modalContainer .title {
+display: inline-block;
+text-align: center;
+margin-top: 10px;
+}
+
+.titleCloseBtn button {
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+}
+.modalContainer.body {
+  flex: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  text-align: center;
+}
+  .modalContainer .footer {
+  flex: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+  .modalContainer .footer button {
+    width: 150px;
+    height: 45px;
+    margin: 10px;
+    border: none;
+    background-color: ☐ cornflowerblue;
+    color: white;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+    #cancelBtn {
+      background-color: □ crimson;
+    } */
+
+.fullscreen{
+  width: 100vw;
+  height: 100vh;/*
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  /* width: 340px;
+    border-radius: 1.625rem;
+    margin: auto;
+    background-color: inherit;
+    border: none;
+    box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.15);
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center; */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  /* background-image: url('./assets/adesanya.jpeg');
+  background-size:contain; 
+    background-position: center;  
+    background-repeat:repeat-y;  */
+}
+
+.searchBar{
+  height: 50px;
+  width: 550px;
+  font-size: 20px;
+}
+
+
+.list {
+  padding: 0;
+  list-style: none; /* Remove default list styles */
+}
+
+.list li {
+  margin-bottom: 30px; /* Add bottom margin of 30px */
+}
+
+
