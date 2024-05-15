@@ -5,7 +5,6 @@ import { ReactSearchAutocomplete } from 'react-search-autocomplete'
 import logo from './assets/fightle.logo.jpg'
 import fighters from "./Fighters";
 import flagMap from "./FlagMaps";
-import adesanya from "./assets/adesanya.jpeg"
 
 
 function App() {
