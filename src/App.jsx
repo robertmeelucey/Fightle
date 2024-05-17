@@ -2,10 +2,11 @@ import FighterCard from "./FighterCard";
 import Modal from "./Modal";
 import React,{useEffect, useState} from 'react';
 import { ReactSearchAutocomplete } from 'react-search-autocomplete'
+//https://www.npmjs.com/package/react-search-autocomplete?activeTab=readmeg
 import logo from './assets/fightle.logo.jpg'
 import fighters from "./Fighters";
 import flagMap from "./FlagMaps";
-
+import ImageFetcher from './ImageFetcher';
 
 function App() {
 
@@ -24,13 +25,9 @@ function App() {
 
 
 
-
-
-
-
   
   //answer in console so i actually now when i'm testing lol
-  console.log(answer);
+  console.log(answer.name);
 
 
 
@@ -70,14 +67,15 @@ function App() {
     }
   }
   const ufcDebutYearColor = (fighter) => {
-    if (fighter.ufcDebutYear === answer.ufcDebutYear) {
-      return 'rgb(83,141,78)';
-    } else if(fighter.ufcDebutYear > answer.ufcDebutYear + 3 || fighter.ufcDebutYear > answer.ufcDebutYear - 3) {
-      return 'rgb(181,159,60)';
+    const difference = Math.abs(fighter.ufcDebutYear - answer.ufcDebutYear);
+    if (difference === 0) {
+        return 'rgb(83,141,78)'; // Green for exact match
+    } else if (difference <= 3) {
+        return 'rgb(181,159,60)'; // Yellow for +/- 3 years difference
     } else {
-      return 'rgb(58, 58, 60)';
+        return 'rgb(58, 58, 60)'; // Grey for others
     }
-  }
+}
 
 
 
@@ -120,7 +118,6 @@ function App() {
 
   useEffect(() => {
     setInputSearchString('');
-    console.log(`change ${guesses}`)
   }, [guesses])
   
   
