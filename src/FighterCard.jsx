@@ -11,7 +11,7 @@ function FighterCard(props) {
             <div className="twoHalves">
                 <div className="half">
                         <Picture name={props.name} nameColor={props.nameColor}/>
-                        <UFCEvent ufcEvent={props.ufcDebut} ufcDebutColor={props.ufcDebutColor}/>
+                        {/* <UFCEvent ufcEvent={props.ufcDebut} ufcDebutColor={props.ufcDebutColor}/> */}
                     </div>
                     <div className="half">
                         <Flag country={props.country} flag={props.flag} flagColor={props.countryColor}/>

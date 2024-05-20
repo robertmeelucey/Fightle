@@ -34,7 +34,7 @@
   margin: 10px;
   display: inline-block; */
   
-  height: 170px;
+  height: 262px;
   width: 290px;
   display: flex;
   justify-content: center; /* Horizontally center the content */
@@ -76,6 +76,8 @@
   box-shadow:rgba(32, 33, 36, 0.28) 0px 1px 6px 0px;
   color: white;
   margin-bottom: 19px;
+  font-family:'Avantgarde', TeX Gyre Adventor, URW Gothic L, sans-serif;
+  font-size: 11px;
 }
 
 .event {
@@ -133,6 +135,7 @@
   background-color: white;
   box-shadow:rgba(32, 33, 36, 0.28) 0px 1px 6px 0px;
   color: white;
+  font-family:'Avantgarde', TeX Gyre Adventor, URW Gothic L, sans-serif;
 }
 
 .fighterCard {
@@ -177,12 +180,13 @@
   background-color: white;
   box-shadow:rgba(32, 33, 36, 0.28) 0px 1px 6px 0px;
   font-family:'Avantgarde', TeX Gyre Adventor, URW Gothic L, sans-serif;
+  font-size: 15.5px;
   color:rgb(255, 255, 255);
   margin-bottom: -9px;
 }
 .textright {
   margin-left: auto;
-  margin-right: 30px;
+  margin-right: 25px;
 }
 
 
@@ -297,3 +301,8 @@ margin-top: 10px;
 }
 
 
+.guesses {
+  font-family:'Avantgarde', TeX Gyre Adventor, URW Gothic L, sans-serif;
+  font-size: 30px;
+  color:rgb(35, 35, 35)
+}

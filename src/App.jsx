@@ -3,10 +3,11 @@ import Modal from "./Modal";
 import React,{useEffect, useState} from 'react';
 import { ReactSearchAutocomplete } from 'react-search-autocomplete'
 //https://www.npmjs.com/package/react-search-autocomplete?activeTab=readmeg
-import logo from './assets/fightle.logo.jpg'
+import logo from './assets/fontbolt.png'
 import fighters from "./Fighters";
 import flagMap from "./FlagMaps";
 import ImageFetcher from './ImageFetcher';
+import alex from './assets/FOLDER_NAME_ON_DESKTOP/Alex Pereira.jpg'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
     return { id: index, name: fighter.name };
   });
   const reset = '';
+  const [isDisabled, setIsDisabled] = useState(false);
 
 
 
@@ -75,7 +77,7 @@ function App() {
     } else {
         return 'rgb(58, 58, 60)'; // Grey for others
     }
-}
+  }
 
 
 
@@ -118,29 +120,43 @@ function App() {
 
   useEffect(() => {
     setInputSearchString('');
-  }, [guesses])
+    if (guesses == 10) {
+      setIsDisabled(d => d = true);
+    }
+    if (guesses != 0) {
+      let str1 = fightersSelected[0].name;
+      let str2 = answer.name;
+      if (str1 == str2) {
+        setIsDisabled(d => d = true);
+      }
+    }
+  }, [guesses]);
+
   
+  const containerStyle = {
+    width: 400,
+    pointerEvents: isDisabled ? 'none' : 'auto',
+  };
   
   return (
     <div className="fullscreen">
     <img src={logo} style={{width: 130, marginBottom: 20, borderRadius: 15}}/>
       {/* {openModal && <Modal closeModal={setOpenModal}/>} */}
-      <div style={{ width: 400 }}>
+      <div style={{width: 400, pointerEvents: isDisabled ? 'none' : 'auto'}}>
           <ReactSearchAutocomplete
             items={items}
-           
+            showIcon={false}
             placeholder='Search...'
             inputSearchString={inputSearchString}
             onSelect={handleOnSelect}
             autoFocus
-            showNoResults
             formatResult={formatResult}
           />
         </div>
       {/* <input type='search' value={fighterName} onChange={handleFighterNameChange} placeholder='Search...' onKeyDown={handleKeyDown} className="searchBar"></input> */}
       {/* <button onClick={() => {selectFighter(), handleGuessChange()}}>Enter</button>
       <button onClick={() => setOpenModal(true)}>??Help??</button> */}
-      <h1> Guesses: {guesses}/10</h1>
+      <h1 className="guesses"> Guesses: {guesses}/10</h1>
       <ul className="list">
         {fightersSelected.map((fighter, index) =>
         <li key={index}>
@@ -156,7 +172,7 @@ function App() {
         ufcDebutColor={ufcDebutColor(fighter)}
         ufcDebutYear={fighter.ufcDebutYear}
         ufcDebutYearColor={ufcDebutYearColor(fighter)}
-        flag={flagMap[fighter.country.trim()]}
+        flag={flagMap[fighter.country]}
 
         ></FighterCard>
         </li>)}
@@ -168,10 +184,16 @@ function App() {
 export default App
 
 // TODO
-// Fix formatting issues
-// Add more fighters 
-// Add pics of fighters
-// Dropdown search
-// Not allow illegal search
-// Add winning screen
-// Add losing screen
+// Add featherweights ✅
+// Add bantamweights ✅
+// Add flyweights ✅
+// Add images for all fighters
+// Potentially remove all fighters who don't have an image ??
+// Fix font size formatting for Name, Weightclass, UfcDebutEvent ✅
+// Experiment with making pic container taller and bringing the left side of name container in
+// Pop up when user guesses correctly
+// Prevent user from submitting anymore answers when they have guessed correctly ✅
+// Pop up when users run out of answers ✅
+// Add help button
+//remove nogueirea
+// volk, figureido
