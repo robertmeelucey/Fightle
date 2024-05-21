@@ -7,7 +7,6 @@ import logo from './assets/fontbolt.png'
 import fighters from "./Fighters";
 import flagMap from "./FlagMaps";
 import ImageFetcher from './ImageFetcher';
-import alex from './assets/FOLDER_NAME_ON_DESKTOP/Alex Pereira.jpg'
 
 function App() {
 
