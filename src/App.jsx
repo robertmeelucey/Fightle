@@ -195,5 +195,4 @@ export default App
 // Prevent user from submitting anymore answers when they have guessed correctly ✅
 // Pop up when users run out of answers ✅
 // Add help button
-//remove nogueirea
-// volk, figureido
+// remove npc's ✅
