@@ -9,7 +9,7 @@ const assignImage = () => {
     return 'src/assets/FOLDER_NAME_ON_DESKTOP/Tom Aspinall.jpg';
 }
 function Picture(props) {
-    const tom = `src/assets/FOLDER_NAME_ON_DESKTOP/${props.name}.jpg`;
+    const tom = `/FOLDER_NAME_ON_DESKTOP/${props.name}.jpg`;
     // const tom = <img src = "src/assets/FOLDER_NAME_ON_DESKTOP/Alex Pereira.jpg"></img>
     return(
         <div className="picture" style = {{backgroundColor: props.nameColor}}>
