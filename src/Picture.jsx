@@ -9,16 +9,18 @@ const assignImage = () => {
     return 'src/assets/FOLDER_NAME_ON_DESKTOP/Tom Aspinall.jpg';
 }
 function Picture(props) {
-    const tom = `/FOLDER_NAME_ON_DESKTOP/${props.name}.jpg`;
+    const tom = `src/assets/FOLDER_NAME_ON_DESKTOP/${props.name}.jpg`;
+    // const tom = <img src = "src/assets/FOLDER_NAME_ON_DESKTOP/Alex Pereira.jpg"></img>
     return(
         <div className="picture" style = {{backgroundColor: props.nameColor}}>
-            {/* <ImageFetcher url={assignImage(props.name)} className="hero-profile__image"/> */}
-            {/* <p>Picture goes of {props.name} goes here</p> */}
-            {/* <img src={alex}/> */}
-            <div>
-                <img src={tom} style = {{marginTop: '-113px', marginLeft: '-10px'}}/>
-            </div>
+            {/* <img src ={tom} style = {{height: "400px"}}/> */}
+                <div>
+                    <img src={tom}/>
+                </div>
         </div>
+        // <>
+        //     <img src ="src/assets/FOLDER_NAME_ON_DESKTOP/Brandon Moreno.jpg" style = {{height: "230px"}}/>
+        // </>
     );
 }
 

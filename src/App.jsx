@@ -153,7 +153,7 @@ function App() {
     {/* <Popup/> */}
     <img src={logo} style={{width: 130, marginBottom: 20, borderRadius: 15}}/>
       {/* {openModal && <Modal closeModal={setOpenModal}/>} */}
-      <div style={{width: 400, pointerEvents: isDisabled ? 'none' : 'auto'}}>
+      <div style={{width: 340, pointerEvents: isDisabled ? 'none' : 'auto'}}>
           <ReactSearchAutocomplete
             items={items}
             showIcon={false}
