@@ -7,6 +7,7 @@ import logo from './assets/fontbolt.png'
 import fighters from "./Fighters";
 import flagMap from "./FlagMaps";
 import ImageFetcher from './ImageFetcher';
+import Popup from "./Popup";
 
 function App() {
 
@@ -108,6 +109,16 @@ function App() {
     setInputSearchString('12345'); // if i remove this line, search stops auto clearing
   }
 
+  const handleOpenPopup = () => {
+    modal.classList.add("open");
+  }
+
+  const handleClosePopup = () => {
+    modal.classList.remove("open");
+  }
+
+
+
 
   const formatResult = (item) => {
     return (
@@ -139,6 +150,7 @@ function App() {
   
   return (
     <div className="fullscreen">
+    {/* <Popup/> */}
     <img src={logo} style={{width: 130, marginBottom: 20, borderRadius: 15}}/>
       {/* {openModal && <Modal closeModal={setOpenModal}/>} */}
       <div style={{width: 400, pointerEvents: isDisabled ? 'none' : 'auto'}}>
@@ -150,6 +162,7 @@ function App() {
             onSelect={handleOnSelect}
             autoFocus
             formatResult={formatResult}
+            className="searchbar"
           />
         </div>
       {/* <input type='search' value={fighterName} onChange={handleFighterNameChange} placeholder='Search...' onKeyDown={handleKeyDown} className="searchBar"></input> */}
@@ -180,7 +193,7 @@ function App() {
   );
 };
 
-export default App
+export default App;
 
 // TODO
 // Add featherweights ✅
