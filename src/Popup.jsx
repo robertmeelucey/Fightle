@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 export default function Popup() {
-  const [modal, setModal] = useState(false);
+  const [modal, setModal] = useState(true);
 
   const toggleModal = () => {
     setModal(!modal);

@@ -151,7 +151,9 @@ function App() {
   return (
     <div className="fullscreen">
     {/* <Popup/> */}
-    <img src={logo} style={{width: 130, marginBottom: 20, borderRadius: 15}}/>
+    <div className="header">
+      <img src={logo} style={{width: 130, marginBottom: 20, borderRadius: 15}}/>
+    </div>
       {/* {openModal && <Modal closeModal={setOpenModal}/>} */}
       <div style={{width: 340, pointerEvents: isDisabled ? 'none' : 'auto'}}>
           <ReactSearchAutocomplete
@@ -199,10 +201,10 @@ export default App;
 // Add featherweights ✅
 // Add bantamweights ✅
 // Add flyweights ✅
-// Add images for all fighters
-// Potentially remove all fighters who don't have an image ??
+// Add images for all fighters ✅
+// Potentially remove all fighters who don't have an image ?? ✅
 // Fix font size formatting for Name, Weightclass, UfcDebutEvent ✅
-// Experiment with making pic container taller and bringing the left side of name container in
+// Experiment with making pic container taller and bringing the left side of name container in ✅
 // Pop up when user guesses correctly
 // Prevent user from submitting anymore answers when they have guessed correctly ✅
 // Pop up when users run out of answers ✅
