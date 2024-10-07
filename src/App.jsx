@@ -17,6 +17,7 @@ function App() {
   const items = fighters.map((fighter, index) => {
     return { id: index, name: fighter.name };
   });
+  const [placeholderText, setPlaceholderText] = useState("Search...");
 
   const [isDisabled, setIsDisabled] = useState(false);
 
@@ -94,11 +95,13 @@ function App() {
     setInputSearchString("");
     if (guesses == 10) {
       setIsDisabled(true);
+      setPlaceholderText("Out of guesses!");
     } else if (guesses != 0) {
       let str1 = fightersSelected[0].name;
       let str2 = answer.name;
       if (str1 == str2) {
         setIsDisabled(true);
+        setPlaceholderText("Congratulations!!!");
       }
     }
   }, [guesses, answer.name, fightersSelected]);
@@ -113,7 +116,7 @@ function App() {
         <ReactSearchAutocomplete
           items={items}
           showIcon={false}
-          placeholder="Search..."
+          placeholder={placeholderText}
           inputSearchString={inputSearchString}
           onSelect={handleOnSelect}
           autoFocus
@@ -153,3 +156,4 @@ export default App;
 // Experiment with making pic container taller and bringing the left side of name container in
 // Pop up when user guesses correctly
 // Add help button
+// Search bar auto defocuses
